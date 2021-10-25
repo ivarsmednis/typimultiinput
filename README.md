@@ -14,13 +14,13 @@ For making multi-value fields.
 2. Install TypiMultiInput
 
    ````
-   composer require visermort/typimultiinput
+   composer require ivarsmednis/typimultiinput
    ````
     
 3. Publish MultiInput files to project directory (config, views, scss, js)
 
     ````
-    php artisan vendor:publish --provider="Visermort\TypiMultiInput\MultiInputProvider"
+    php artisan vendor:publish --provider="ivarsmednis\TypiMultiInput\MultiInputProvider"
     
     ```` 
 4. Write links to scss, js

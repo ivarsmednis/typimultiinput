@@ -15,16 +15,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Visermort\\TypiMultiInput\\": "src/MultiInput"
+            "Ivarsmednis\\TypiMultiInput\\": "src/MultiInput"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Visermort\\TypiMultiInput\\MultiInputProvider"
+                "Ivarsmednis\\TypiMultiInput\\MultiInputProvider"
             ],
             "aliases": {
-                "MultiInput":"Visermort\\TypiMultiInput\\MultiInput"
+                "MultiInput":"Ivarsmednis\\TypiMultiInput\\MultiInput"
             }
         }
     }

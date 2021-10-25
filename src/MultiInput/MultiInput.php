@@ -1,11 +1,11 @@
 <?php
 
-namespace Visermort\TypiMultiInput;
+namespace Ivarsmednis\TypiMultiInput;
 
 use Illuminate\Support\Facades\App;
 use TypiCMS\Modules\Files\Models\File;
-use Visermort\TypiMultiInput\Lib\HasRows;
-use Visermort\TypiMultiInput\Lib\HasValue;
+use Ivarsmednis\TypiMultiInput\Lib\HasRows;
+use Ivarsmednis\TypiMultiInput\Lib\HasValue;
 
 class MultiInput
 {

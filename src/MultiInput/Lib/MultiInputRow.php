@@ -1,8 +1,8 @@
 <?php
 
-namespace Visermort\TypiMultiInput\Lib;
+namespace Ivarsmednis\TypiMultiInput\Lib;
 
-use Visermort\TypiMultiInput\MultiInput;
+use Ivarsmednis\TypiMultiInput\MultiInput;
 
 class MultiInputRow
 {

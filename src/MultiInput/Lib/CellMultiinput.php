@@ -1,6 +1,6 @@
 <?php
 
-namespace Visermort\TypiMultiInput\Lib;
+namespace Ivarsmednis\TypiMultiInput\Lib;
 
 class CellMultiinput extends CellBase
 {

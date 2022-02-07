@@ -17,6 +17,7 @@ class MultiInputRow
     protected $cellTypes = [
         'varchar' => CellVarchar::class,
         'text' => CellText::class,
+        'richtext' => CellRichText::class,
         'number' => CellNumber::class,
         'dropdown' => CellDropdown::class,
         'date' => CellDate::class,

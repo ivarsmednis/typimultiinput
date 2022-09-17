@@ -2,7 +2,7 @@
 
 namespace Ivarsmednis\TypiMultiInput\Lib;
 
-use TypiCMS\Modules\Files\Models\File;
+use TypiCMS\Modules\Core\Models\File;
 use Ivarsmednis\TypiMultiInput\Multiinput;
 
 class CellFile extends CellBase

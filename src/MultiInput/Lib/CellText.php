@@ -12,9 +12,9 @@ class CellText extends CellBase
     {
         if ($language) {
             return BootForm::textarea($this->title.' ('.$language.')', $this->attributeName.'['.$language.']')
-                ->data('translatable', 1)->data('language', $language)->rows(4)->value($value);
+                ->data('translatable', 1)->data('language', $language)->rows(4)->value($value ? $value : "");
         }
-        return BootForm::textarea($this->title, $this->attributeName)->rows(4)->value($value);
+        return BootForm::textarea($this->title, $this->attributeName)->rows(4)->value($value ? $value : "");
     }
 
 

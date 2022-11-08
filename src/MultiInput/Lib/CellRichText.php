@@ -12,9 +12,9 @@ class CellRichText extends CellBase
     {
         if ($language) {
             return BootForm::textarea($this->title.' ('.$language.')', $this->attributeName.'['.$language.']')
-                ->data('translatable', 1)->data('language', $language)->rows(4)->value($value)->class('ckeditor-light');
+                ->data('translatable', 1)->data('language', $language)->rows(4)->value($value ? $value : "")->class('ckeditor-light');
         }
-        return BootForm::textarea($this->title, $this->attributeName)->rows(4)->value($value);
+        return BootForm::textarea($this->title, $this->attributeName)->rows(4)->value($value ? $value : "");
     }
 
 

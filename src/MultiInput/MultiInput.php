@@ -143,7 +143,7 @@ class MultiInput
 
     protected function getConfig($configName)
     {
-        $config = Config('multiinput.'.$configName);
+        $config = config('multiinput.'.$configName);
         if (!$config) {
             $this->errors[] = 'Config not found or not valid - '.$configName;
             return ;

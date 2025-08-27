@@ -2,7 +2,6 @@
 
 namespace Ivarsmednis\TypiMultiInput\Lib;
 
-use Lang;
 
 trait HasValue
 {
@@ -26,7 +25,7 @@ trait HasValue
 
     public function getTitle()
     {
-        return Lang::get('db.'.$this->title);
+        return __('db.'.$this->title);
     }
     public function getAttributeName()
     {

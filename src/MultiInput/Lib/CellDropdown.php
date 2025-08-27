@@ -3,7 +3,6 @@
 namespace Ivarsmednis\TypiMultiInput\Lib;
 
 use BootForm;
-use Lang;
 
 class CellDropdown extends CellBase
 {
@@ -27,7 +26,7 @@ class CellDropdown extends CellBase
             return $id;
         }
         if (isset($this->config['items'][$id])) {
-            return Lang::get('db.'.$this->config['items'][$id]);
+            return __('db.'.$this->config['items'][$id]);
         }
         return $id;
     }

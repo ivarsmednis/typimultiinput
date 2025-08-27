@@ -3,7 +3,6 @@
 namespace Ivarsmednis\TypiMultiInput\Lib;
 
 use BootForm;
-use Lang;
 
 class CellCheckBox extends CellBase
 {
@@ -29,7 +28,7 @@ class CellCheckBox extends CellBase
             return $value;
         }
         if ($value) {
-            return Lang::get('db.' . $this->config['title']);
+            return __('db.' . $this->config['title']);
         }
     }
 

@@ -1,19 +1,11 @@
 <?php
 
-if (!defined('MULTIINPUT_STATUS_WAITING')) {
-    define('MULTIINPUT_STATUS_WAITING', 0);
-}
-if (!defined('MULTIINPUT_STATUS_ACTIVE')) {
-    define('MULTIINPUT_STATUS_ACTIVE', 1);
-}
-if (!defined('MULTIINPUT_STATUS_DISABLE')) {
-    define('MULTIINPUT_STATUS_DISABLE', 2);
-}
+use Ivarsmednis\TypiMultiInput\Constants;
 
 $activeLabels = [
-    MULTIINPUT_STATUS_WAITING => "Waiting",
-    MULTIINPUT_STATUS_ACTIVE => "Active",
-    MULTIINPUT_STATUS_DISABLE => "Disable",
+    Constants::MULTIINPUT_STATUS_WAITING => "Waiting",
+    Constants::MULTIINPUT_STATUS_ACTIVE => "Active",
+    Constants::MULTIINPUT_STATUS_DISABLE => "Disable",
 ];
 
 return [

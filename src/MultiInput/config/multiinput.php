@@ -1,8 +1,14 @@
 <?php
 
-define('MULTIINPUT_STATUS_WAITING', 0);
-define('MULTIINPUT_STATUS_ACTIVE', 1);
-define('MULTIINPUT_STATUS_DISABLE', 2);
+if (!defined('MULTIINPUT_STATUS_WAITING')) {
+    define('MULTIINPUT_STATUS_WAITING', 0);
+}
+if (!defined('MULTIINPUT_STATUS_ACTIVE')) {
+    define('MULTIINPUT_STATUS_ACTIVE', 1);
+}
+if (!defined('MULTIINPUT_STATUS_DISABLE')) {
+    define('MULTIINPUT_STATUS_DISABLE', 2);
+}
 
 $activeLabels = [
     MULTIINPUT_STATUS_WAITING => "Waiting",

@@ -15,16 +15,20 @@
         <div class="filemanager-item-trans">
             <div v-if="id !== null" class="filemanager-item-removable">
                 <button class="filemanager-item-removable-button" type="button" @click="unsetData">
-                    <span class="fa fa-times"></span>
+                    <x-icon :size="18" stroke-width="2" />
                 </button>
-                <div v-if="type === 'document'"><span class="fa fa-fw fa-2x fa-file-o"></span> {{ name }}</div>
+                <div v-if="type === 'document'" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <file-icon :size="24" stroke-width="1.25" />
+                    <span>{{ name }}</span>
+                </div>
                 <div class="filemanager-item-image-wrapper" v-if="type === 'image'">
                     <img class="filemanager-item-image" :src="src" :alt="alt" />
                 </div>
             </div>
             <div class="filemanager-item-addbutton" v-if="id === null">
                 <button @click="openFilepicker" class="btn btn-sm btn-secondary" type="button">
-                    <span class="fa fa-plus fa-fw text-white-50"></span> {{ $t('Add') }}
+                    <circle-plus-icon :size="18" class="text-white-50" />
+                    {{ $t('Add') }}
                 </button>
             </div>
             <div class="filemanager-item-message"><span>{{ newitemmessage }}</span></div>
@@ -33,7 +37,14 @@
 </template>
 
 <script>
+import { CirclePlusIcon, FileIcon, XIcon } from 'lucide-vue-next';
+
 export default {
+    components: {
+        CirclePlusIcon,
+        FileIcon,
+        XIcon,
+    },
     props: {
         field: {
             type: String,
@@ -80,12 +91,16 @@ export default {
         }
     },
     mounted() {
-        this.$root.$on('fileAdded', file => {
+        emitter.on('fileAdded', file => {
             if (this.choosingFile === true) {
                 this.setData(file);
             }
             this.choosingFile = false;
         });
+    },
+    beforeUnmount() {
+        // Clean up event listener
+        emitter.off('fileAdded');
     },
     methods: {
         setData(file) {
@@ -102,14 +117,10 @@ export default {
         },
         openFilepicker() {
             this.choosingFile = true;
-            let options = {
-                open: true,
-                multiple: false,
-                overlay: true,
-                single: true,
-                modal: true,
-            };
-            this.$root.$emit('openFilepicker', options);
+            emitter.emit('openFilePicker', { 
+                single: true, 
+                type: this.type 
+            });
         },
     },
 };

@@ -24,6 +24,7 @@ class MultiInput
             'element' => 'element',
             'file' => 'file',
             'image' => 'image',
+            'richtext' => 'richtext',
         ],
         'public' => [
             'directory' => 'vendor.multiinput.public.',
